@@ -22,7 +22,8 @@ config:
 	--dbpass=wp \
 	--dbhost=mysql \
 	--skip-check \
-	--allow-root
+	--allow-root \
+	--force
 
 install:
 	docker compose run --rm wpcli wp core install \
