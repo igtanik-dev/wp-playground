@@ -36,6 +36,9 @@ install:
 
 
 setup:
+
+	docker compose down
+	docker compose up -d
 	# permalink
 	docker compose run --rm wpcli wp rewrite structure '/%postname%/' --hard
 
@@ -43,7 +46,7 @@ setup:
 	docker compose run --rm wpcli wp post delete 1 --force || true
 	docker compose run --rm wpcli wp post delete 2 --force || true
 	docker compose run --rm wpcli wp post delete 3 --force || true
-# 	docker compose run --rm wpcli wp comment delete 1 --force || true
+	docker compose run --rm wpcli wp comment delete 1 --force || true
 	docker compose run --rm wpcli wp plugin delete akismet || true
 	docker compose run --rm wpcli wp plugin delete hello || true
 	
@@ -80,7 +83,7 @@ init:
 	make up
 	make config
 	make install
-	make setup
+
 
 
 
