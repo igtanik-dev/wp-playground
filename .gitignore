@@ -1,1 +1,46 @@
+# =========================
+# Environment / Secrets
+# =========================
 .env
+.env.*
+!.env.example
+
+# =========================
+# WordPress runtime files
+# =========================
+wp-config.php
+
+# =========================
+# Database
+# (Blueprint = NO DB)
+# =========================
+db/
+*.sql
+*.sql.gz
+
+# =========================
+# Uploads
+# (content comes from DB)
+# =========================
+wp-content/uploads/*
+!wp-content/uploads/.gitkeep
+
+# =========================
+# Cache / logs
+# =========================
+wp-content/cache/
+wp-content/debug.log
+wp-content/*.log
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# =========================
+# Docker runtime noise
+# =========================
+docker-compose.override.yml
