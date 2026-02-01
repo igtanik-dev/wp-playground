@@ -3,27 +3,27 @@
 # =========================
 .env
 .env.*
-!.env.example
+# !.env.example
 
 # =========================
 # WordPress runtime files
 # =========================
-wp-config.php
+# wp-config.php
 
 # =========================
 # Database
 # (Blueprint = NO DB)
 # =========================
-db/
-*.sql
-*.sql.gz
+# db/
+# *.sql
+# *.sql.gz
 
 # =========================
 # Uploads
 # (content comes from DB)
 # =========================
-wp-content/uploads/*
-!wp-content/uploads/.gitkeep
+# wp-content/uploads/*
+# !wp-content/uploads/.gitkeep
 
 # =========================
 # Cache / logs
