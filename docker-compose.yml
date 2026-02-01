@@ -11,7 +11,7 @@ services:
       retries: 10
 
   wordpress:
-    image: wordpress:6.5.3-php8.2-fpm
+    image: wordpress:6.8.2-php8.2-fpm
     env_file: .env
     volumes:
       - wp_core:/var/www/html
@@ -20,9 +20,9 @@ services:
       mysql:
         condition: service_healthy
 
-
   wpcli:
-    image: wordpress:cli
+    image: wordpress:cli-php8.2
+    env_file: .env
     volumes:
       - wp_core:/var/www/html
       - ./wp-content:/var/www/html/wp-content
